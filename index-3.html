@@ -50,7 +50,21 @@
         <div class="light"></div>
     </div>
     <script>
+        document.addEventListener('keydown', function (event) {
+            const lights = document.querySelectorAll('.light');
 
+            lights.forEach(light => {
+                light.style.backgroundColor = '';
+            });
+
+            if (event.key === 'r') {
+                lights[0].style.backgroundColor = 'red';
+            } else if (event.key === 'o') {
+                lights[1].style.backgroundColor = 'orange';
+            } else if (event.key === 'g') {
+                lights[2].style.backgroundColor = 'green';
+            }
+        });
     </script>
 </body>
 
